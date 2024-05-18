@@ -9,7 +9,8 @@ class Train {
     Cage * next;
     Cage * prev;
   };
-  int iRes, iLen;
+  int iRes;
+  int iLen;
   int countOp; // счетчик шагов (число переходов из вагона в вагон)
   Cage *first; // точка входа в поезд (первый вагон)
 
