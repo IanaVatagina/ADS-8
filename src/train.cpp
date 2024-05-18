@@ -26,15 +26,16 @@ void Train::addCage(bool light) {
 }
 
 int Train::getLength() {
-  first->light = true;
+  if (!first->light) {
+    first->light = true;
+  }
   while (true) {
-    countOp = countOp + 1;
-    while (first->next->light == false) {
+    while (!first->next->light) {
       countOp = countOp + 1;
       iLen = iLen + 1;
       first = first->next;
     }
-    countOp = countOp + 1;
+    countOp = countOp + 2;
     first->next->light = false;
     iRes = iLen + 1;
     for (; iLen > 0; iLen--) {
