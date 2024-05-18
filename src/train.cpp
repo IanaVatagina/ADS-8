@@ -2,8 +2,8 @@
 #include "train.h"
 
 Train::Train() {
-  first->prev = nullptr;
   first = new Cage;
+  first->prev = nullptr;
   iLen = 0;
   iRes = 0;
   countOp = 0;
