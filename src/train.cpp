@@ -1,5 +1,14 @@
 // Copyright 2021 NNTU-CS
 #include "train.h"
+
+Train::Train() {
+  first->prev = nullptr;
+  first = new Cage;
+  iLen = 0;
+  iRes = 0;
+  countOp = 0;
+}
+
 void Train::addCage(bool light) {
   if (first->prev != nullptr) {
     Cage *cTemp = first->next;
